@@ -7,10 +7,10 @@ files are private and can't be accessed publicly.
 https://developers.google.com/drive/api/quickstart/python
 2. Make sure to put credentials.json inside config directory
 3. Create new python virtual env 
-4. Install requirements by using <code> pip install -r requirements </code>
+4. Install requirements by using <code>pip install -r requirements</code>
 5. Configure the time frequency you would like the script to check your drive changes on CHECK_NEW_FILES_FREQUENCY 
 in google_drive_security_checker.py
-6. Run the script using <code> python google_drive_security_checker.py </code>
+6. Run the script using <code>python google_drive_security_checker.py</code>
 
 ### Interesting Stuff 
 While I was working on this project, and played with the API a bit I found that I can retrieve deleted files even
@@ -29,7 +29,7 @@ can be saved in a more secure way in the next versions. make sure to delete it i
 - When you start the script in the first time, you should give the script the permissions it asks for
 
 ### Usage Example:
-<code> python google_drive_security_checker.py </code>
+<code>python google_drive_security_checker.py</code>
 
 ### Output:
 >INFO:root:Start monitoring you Google Drive\
