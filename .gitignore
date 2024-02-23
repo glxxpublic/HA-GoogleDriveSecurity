@@ -1,0 +1,4 @@
+# ignore audit files
+audit/
+# ignore credentials and tokens
+config/
