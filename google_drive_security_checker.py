@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 
 PUBLIC_ACCESS_PERMISSIONS = ['anyoneWithLink']
 CHECK_NEW_FILES_FREQUENCY = 10  # in seconds
-LAST_CHECK_TIMESTAMP_PATH = 'audit/last_check_timestamp.txt'
+LAST_CHECK_TIMESTAMP_PATH = os.path.join('audit', 'last_check_timestamp.txt')
 
 
 class GoogleDriveSecurityChecker:

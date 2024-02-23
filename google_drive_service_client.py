@@ -11,7 +11,7 @@ from googleapiclient.discovery import build
 # TODO check if I can do that with lower permissions
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 
-LAST_PAGE_TOKEN_PATH = 'audit/last_page_token.txt'
+LAST_PAGE_TOKEN_PATH = os.path.join('audit', 'last_page_token.txt')
 
 
 class GoogleDriveServiceClient:
@@ -49,15 +49,15 @@ class GoogleDriveServiceClient:
 
     def init_google_drive_service_client(self):
         self.creds = None
-        if os.path.exists("config/token.json"):
-            self.creds = Credentials.from_authorized_user_file("config/token.json", SCOPES)
+        if os.path.exists(os.path.join('config', 'token.json')):
+            self.creds = Credentials.from_authorized_user_file(os.path.join('config', 'token.json'), SCOPES)
         if not self.creds or not self.creds.valid:
             if self.creds and self.creds.expired and self.creds.refresh_token:
                 self.creds.refresh(Request())
             else:
-                flow = InstalledAppFlow.from_client_secrets_file("config/credentials.json", SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file(os.path.join('config', 'credentials.json'), SCOPES)
                 self.creds = flow.run_local_server(port=0)
-            with open("config/token.json", "w") as token:
+            with open(os.path.join('config','token.json'), "w") as token:
                 token.write(self.creds.to_json())
 
         self.service_client = build("drive", "v3", credentials=self.creds)

@@ -57,7 +57,3 @@ Admin console. For more information about groups settings, see the administratio
 - In this version, the script is pulling and sleeping for configurable time. It is a better practice to use 
 <code> watch</code> method and get push every time something changed. due to time consideration I didn't manage to 
 use this method
-
-### TODO: self note
-- open / login to github repository and upload you solution
-- check better method (watch) and get push instead of pulling
