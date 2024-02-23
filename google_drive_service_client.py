@@ -48,6 +48,9 @@ class GoogleDriveServiceClient:
         return page_token
 
     def init_google_drive_service_client(self):
+        assert os.path.exists(os.path.join('config', 'credentials.json')), \
+            "You should get you project credentials. please follow readme and get it here: " \
+            "https://console.cloud.google.com/apis/credentials"
         self.creds = None
         if os.path.exists(os.path.join('config', 'token.json')):
             self.creds = Credentials.from_authorized_user_file(os.path.join('config', 'token.json'), SCOPES)
