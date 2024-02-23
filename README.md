@@ -5,7 +5,9 @@ files are private and can't be accessed publicly.
 ## In order to run the script you should first do the following steps:
 1. Follow the instruction here to enable API and do all preparation needed:
 https://developers.google.com/drive/api/quickstart/python
-2. Make sure to put credentials.json inside config directory
+2. Make sure to put credentials.json inside config directory, if needed, you can get credentials.json from 
+https://console.cloud.google.com/apis/credentials, below OAuth 2.0 Client IDs section, get in to your project and below
+client secrets you can download the credentials json
 3. Create new python virtual env 
 4. Install requirements by using <code>pip install -r requirements</code>
 5. Configure the time frequency you would like the script to check your drive changes on CHECK_NEW_FILES_FREQUENCY 
